@@ -1,0 +1,52 @@
+<html>
+<head>
+	<title>Letter</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script defer src="js/main.js"></script>
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+  <audio src="saturn.mp3"></audio>
+ 
+  <i class="fa fa-envelope" data-modal-target="#modal" id="click" onclick="typing()" id="mid"></i>
+  
+  <div class="modal" id="modal">
+    <div class="modal-header">
+        <div class="title"> 💕 Leia com Carinho 💕 </div>
+        <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+            <div id="text">
+
+    </div>
+
+    </div>
+
+  </div>
+  <div id="overlay"></div>
+  <script type="text/javascript">
+  var i=0,text;
+  text = "Então, coração, nosso primeiro mês juntos. Quero que saiba que esses ultimos dias ao teu lado tem sido maravilhoros e eu estou amando de verdade te conhecer cada vez mais e descobrir a pessoa maravilhosa que você é, quero também que saiba que sou muito grato por ter você comigo, não sou muito bom com texto, mas tudo que eu disse é de coração, te amo!"
+
+  function typing() {
+    if(i<text.length){
+      document.getElementById("text").innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typing,80);
+    }
+  }
+</script>
+<script type="text/javascript">
+    const button = document.getElementById("click")
+    click.addEventListener('click', function(){
+      const audio = document.querySelector('audio')
+      audio.play()
+    })
+
+
+</script>
+</body>
+</html>
